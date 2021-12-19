@@ -71,7 +71,8 @@ class App extends Component {
       handleChange,
       handleCreate,
       handleKeyPress,
-      handleToggle
+      handleToggle,
+      handleRemove
     } = this;
 
     return (
@@ -83,7 +84,7 @@ class App extends Component {
           onCreate={handleCreate}
         />
       )}>
-        <TodoItemList todos={todos} onToggle={handleToggle}/>
+        <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
       </TodoListTemplate>
     );
   }
